@@ -72,10 +72,13 @@
 									todir="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/configurations">
 									<fileset dir="${basedir}/configurations" includes="**/*" />
 								</copy>
+								<copy file="${basedir}/libs/pax-confman-propsloader-0.2.3.jar"
+									todir="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/plugins/" />
+								
 								<propertyfile
 									file="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/configuration/config.ini">
 									<entry key="osgi.bundles" type="string" operation="+"
-										value=", reference:file:pax-confman-propsloader-0.2.2.jar@1:start" />
+										value=", reference:file:pax-confman-propsloader-0.2.3.jar@1:start" />
 								</propertyfile>
 							</tasks>
 						</configuration>
