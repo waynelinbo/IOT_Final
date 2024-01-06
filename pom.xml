@@ -185,5 +185,6 @@
 		<module>org.eclipse.om2m.dal.driver.sample</module>
 		<module>org.eclipse.om2m.ipe.dal</module>
 		<module>com.orange.om2m.p2.repo</module>
+		<module>org.eclipse.om2m.sample.test_ipe</module>
 	</modules>
 </project>

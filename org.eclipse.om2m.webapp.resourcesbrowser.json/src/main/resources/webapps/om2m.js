@@ -37,6 +37,16 @@ var username;
 var password;
 var parser=new DOMParser();
 
+/**
+* Append for blocked users
+*/
+const tryCountMax = 5;
+var tryCount = 0;
+var isBlocked = false;
+//////////////////////////////////////////
+
+
+
 function make_base_auth(user, password) {
   var tok = user + ':' + password;
   //var hash = btoa(tok);
@@ -45,9 +55,15 @@ function make_base_auth(user, password) {
 }
 
 function login(){
-    username = $("input#username").val();
-    password = $("input#password").val();
-    get("/" + cseBase);
+    if (isBlocked) {
+        $("#failCount").html('Fail login count >= '+tryCountMax);
+        $("#error").html('You are banned !');
+    }
+    else {
+        username = $("input#username").val();
+        password = $("input#password").val();
+        get("/" + cseBase);
+    }
 }
 
 function logout(){
@@ -77,7 +93,10 @@ function get(targetId){
             $("#attributes").html("");
             $('#content').html('');
             $('#response').html('');
+            $("#failCount").html('');
             $("#error").html('');
+
+            tryCount = 0;
 
             for(var resourceName in response){
                 var resource = response[resourceName];
@@ -171,7 +190,17 @@ function get(targetId){
             });
         },
         error: function(xhr,status,error){
-            $("#error").html(xhr.status+' '+status+' '+error);
+            tryCount += 1;
+            if (tryCount == tryCountMax) isBlocked=true;
+            if (isBlocked) {
+                $("#failCount").html('Fail login count >= '+tryCountMax);
+                $("#error").html('You are banned !');
+            }
+            else {
+                $("#failCount").html('Fail login count : '+tryCount);
+                $("#error").html(xhr.status+' '+status+' '+error);
+            }
+            
         }
     });
 }
