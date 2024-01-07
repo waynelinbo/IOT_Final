@@ -89,7 +89,9 @@ IOT Final - Security Enhancement
    <img src="https://github.com/waynelinbo/IOT_Final/assets/39195011/6a7ee6b6-053c-4a6e-a33d-771ca71c0bc3" width="80%" alt="XXX" align=center />
    
 4. mn-cse can be linked from in-cse
-5. Use wireshark to check whether the packet is encrypted
+   <img src="https://github.com/waynelinbo/IOT_Final/assets/39195011/0947a27d-4298-41ec-9680-748ac66ce905" width="80%" alt="XXX" align=center />
+
+6. Use wireshark to check whether the packet is encrypted
    * After enabling https, the packet is encrypted <br>
      <img src="https://github.com/waynelinbo/IOT_Final/assets/39195011/5187844b-3b3c-40a0-b992-02bb68e5932a" width="80%" alt="XXX" align=center />
 
