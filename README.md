@@ -1,4 +1,4 @@
-IOT Final - Security Enhancement
+IOT Final - OM2M Security Enhancement
 ==========
 
 ## Feature
