@@ -148,6 +148,9 @@ Successfully ban the user with more than 5 failed login attempts
 <br>
 <img src="https://github.com/waynelinbo/IOT_Final/assets/39195011/001c2ccd-6cd1-41ac-96d3-b224770ddb81" width="60%" alt="XXX" align=center />
 
-
+## Reference
+1. [Eclipse Community Forums - OM2M and security mechanism](https://www.eclipse.org/forums/index.php/t/1065938/)
+2. [Eclipse Community Forums - Use TLS for IN-CSE and MN-CSE communication](https://www.eclipse.org/forums/index.php/t/1094023/)
+3. [IBM - Configuring TLS/SSL communication and Connecting with SSH](https://www.ibm.com/docs/en/cmwo/4.3.0.0?topic=SST55W_4.3.0/liaca/liacasslconfig.htm)
 
    
